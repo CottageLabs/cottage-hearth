@@ -1,0 +1,110 @@
+{% load wagtailuserbar wagtailcore_tags static %}<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cottage Labs</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="{% static "images/favicon.png" %}" type="image/png">
+  <link rel="stylesheet" href="//static.cottagelabs.com/bootstrap-3.0.3/css/bootstrap.min.css">
+
+  <link href="{% static "css/cl.css" %}" rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    {% wagtailuserbar %}
+    <nav class="navbar navbar-fixed-top">
+        <div class="container"><div class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/" class="navlink"><img src="{% static "images/cottage.svg" %}" class="cottage"> Cottage Labs</a>
+                <div class="navigation pull-right">
+
+
+<ul>
+    <li><a href="/data-services" class="navlink">Data Services</a></li>
+    <li><a href="/clients" class="navlink">Clients</a></li>
+</ul>
+                </div>
+            </div>
+        </div>
+        </div></div>
+    </nav>
+    <nav class="narrow-nav">
+        <div class="container"><div class="content">
+
+
+<ul>
+    <li><a href="/data-services" class="navlink">Data Services</a></li>
+    <li><a href="/clients" class="navlink">Clients</a></li>
+</ul>
+        </div></div>
+    </nav>
+
+
+
+    <header>
+        <div class="container"><div class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.tagline %}
+                    <p class="tagline">{{ page.tagline }}</p>
+                    {% endif %}
+                {% if page.blurb %}
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 brief">
+                            {{ page.blurb|richtext }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                </div>
+            </div>
+        </div></div>
+    </header>
+
+{% block content %}
+{% endblock %}
+
+
+
+    <footer>
+        <div class="container"><div class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="{% static "images/cottage.svg" %}" class="cottage pull-right">
+                </div>
+            </div>
+        </div></div>
+
+        <div id="info">
+            <div class="container"><div class="content">
+                <div class="row">
+                    <div class="toe col-md-6">
+                        <p>Email: <a href="mailto:us@cottagelabs.com">us@cottagelabs.com</a></p>
+                        <p><a href="http://twitter.com/cottagelabs">Twitter</a> |
+                        <a href="https://github.com/CottageLabs">GitHub</a> |
+                        <a href="https://www.linkedin.com/company/cottagelabs">LinkedIn</a> |
+                        <a href="https://www.facebook.com/cottagelabs/">facebook</a></p>
+                        <p><a href="/jobs">Jobs at Cottage Labs</a></p>
+                        <p>&copy; Cottage Labs LLP 2011 - 2019.  All site content <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></p>
+                    </div>
+
+                    <div class="toe col-md-6">
+                        <p class="right-side">
+                          Cottage Labs LLP is a partnership registered in Scotland<br>
+                          Company Number: SO303454<br>
+                          VAT Registration: 127710036<br>
+                          DUNS: 21-736-0418
+                        </p>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+    </footer>
+
+</body>
+</html>

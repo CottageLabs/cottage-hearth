@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+    <section class="clients">
+        <div class="container">
+            <div class="content">
+
+                {% for client in clients %}
+            <a href="{{ client.url }}">
+                {% image client.logo max-400x120 alt=client.title title=client.title class="logos short" %}
+            </a>
+                {% endfor %}
+        </div></div></section>
+{% endblock %}
