@@ -8,6 +8,7 @@ authors = ["Cottage Labs <us@cottagelabs.com>"]
 python = "^3.9"
 wagtail = "^2.13"
 django-debug-toolbar = "^3.2.1"
+django-allauth = "*"
 
 [tool.poetry.dev-dependencies]
 

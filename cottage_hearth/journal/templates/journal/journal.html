@@ -1,0 +1,15 @@
+{% extends "journal/base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+<section>
+    <h2>Recent articles</h2>
+    <ul>
+        {% for article in recent_articles %}
+        <li><a href="{% pageurl article %}">{{ article }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock content %}
